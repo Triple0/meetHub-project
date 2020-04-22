@@ -8,9 +8,7 @@ class App extends Component {
   render() {
     return (
       <Grid centered>
-        <Grid.Row>
           <SignupForm />
-        </Grid.Row>
       </Grid>
     );
   }

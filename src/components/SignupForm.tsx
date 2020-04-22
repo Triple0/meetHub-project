@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import {
   Button,
   Form,
-  Input,
-  Grid
+  Grid,
+  Segment,
+  Message,
+  Header,
 } from "semantic-ui-react";
 
 import { RootState } from "../store/index";
@@ -16,10 +18,7 @@ export interface ISignupListProps {
   signupList: Signup[];
 }
 
-
 export class SignupForm extends Component<ISignupListProps> {
-  
-
   //for adding new todo task into the whole Todo list
   addSignup = (event: any) => {
     event.preventDefault();
@@ -46,52 +45,78 @@ export class SignupForm extends Component<ISignupListProps> {
     this.props.addSignupToList({
       username: formFieldValue,
       password: formFieldValue1,
-      email: formFieldValue2
+      email: formFieldValue2,
     });
   };
 
   render() {
-    //const { value }= this.state;
     return (
-      <Grid>
-      <Form onSubmit={this.addSignup}>
-        <Form.Field
-          control={Input}
-          name="username-input"
-          label="Username"
-          placeholder="Username"
-          error="Please enter your user name"
-        />
-        <Form.Field
-          control={Input}
-          name="password-input"
-          label="Password"
-          placeholder="Password"
-          error="Please enter your Password"
-        />
-        <Form.Field
-          name="email-input"
-          control={Input}
-          label="Email"
-          placeholder="joe@schmoe.com"
-          error="Please enter a valid email address"
-        />
-        
-        <Form.Field control={Button}>Submit</Form.Field>
-      </Form>
-      <Grid.Row>
+      <Grid
+        textAlign="center"
+        style={{ height: "100vh" }}
+        verticalAlign="middle"
+      >
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as="h2" color="teal" textAlign="center">
+            WelCome to MeetHub / Create your account
+          </Header>
+          <Form size="large" onSubmit={this.addSignup} success>
+            <Segment stacked>
+              <Form.Input
+                fluid
+                required
+                name="username-input"
+                label="Username"
+                icon="user"
+                iconPosition="left"
+                placeholder="E-mail address"
+              />
+              <Form.Input
+                fluid
+                required
+                name="password-input"
+                label="Password"
+                icon="lock"
+                iconPosition="left"
+                placeholder="Password"
+                type="password"
+              />
+              <Form.Input
+                fluid
+                required
+                name="email-input"
+                label="Email"
+                icon="mail"
+                iconPosition="left"
+                placeholder="joe@schmoe.com"
+                type="email"
+              />
+              <Button color="teal" fluid size="large">
+                SignUp
+              </Button>
+            </Segment>
+            <Message
+              success
+              header="Form Submitted"
+              content="You're all signed up for the MeetHub."
+            />
+          </Form>
+
+
           <ul>
             {this.props.signupList.map((element) => (
               <li>
-                {element.username}{element.password}{element.email}
+                {element.username}
+                {element.password}
+                {element.email}
                 {/* <Button 
                   size="mini" color="red"
                   onClick={(event) => this.deleteTask(element.id)}
                 >X</Button> */}
-              </li>  
+              </li>
             ))}
           </ul>
-        </Grid.Row>
+        </Grid.Column>
       </Grid>
     );
   }

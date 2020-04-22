@@ -22,6 +22,7 @@ import {
   
   //here is todo reducer /functionality setup
   export function signupReducer(state = initialState, action: SignupActionTypes) {
+      
     switch (action.type) {
         
       case ADD_SIGNUP_TO_LIST:
