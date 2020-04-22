@@ -1,14 +1,19 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+//import { connect } from "react-redux";
+import SignupForm from "./components/SignupForm";
+import { Grid } from "semantic-ui-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Grid centered>
+        <Grid.Row>
+          <SignupForm />
+        </Grid.Row>
+      </Grid>
+    );
+  }
 }
 
 export default App;
