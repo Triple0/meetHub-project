@@ -13,7 +13,8 @@ export default class App extends Component<IAppProps> {
   render() {
     return (
       <Grid centered>
-          {/* Start with /Login in browser it can appear Login component */}
+          {/* Start with localhost:3000/Login in browser it can appear Login component 
+          after that it will switch from login and signup form..*/}
         <Switch>
           <Route path="/SignupForm" component={SignupForm}/>
           <Route path="/Login" component={Login}/>

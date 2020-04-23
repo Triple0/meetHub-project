@@ -30,8 +30,8 @@ export function signupReducer (
 ) {
 
   //just for checking that the array og signup date added or not..
-  console.log(state);
-  console.log(action);
+  console.log("Current State:"+state);
+  console.log("Current Action:"+action);
 
   switch (action.type) {
     case ADD_SIGNUP_TO_LIST:

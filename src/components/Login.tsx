@@ -11,8 +11,8 @@ export default class Login extends React.Component<ILoginProps> {
       <div>
         <h1>Login Page </h1>
         
-        <Button as={Link} to={"/SignupForm"} contect="GoToSignupPage" color="teal" fluid size="large">
-            GoToSignupPage
+        <Button as={Link} to={"/SignupForm"} contect="GoToSignupForm" color="teal" fluid size="large">
+            GoToSignupForm
         </Button>
       </div>
     );

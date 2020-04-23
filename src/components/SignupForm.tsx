@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Login from "./Login";
-import { Button, Form, Grid, Segment, Message, Header } from "semantic-ui-react";
+import { Button, Form, Grid, Segment, Header } from "semantic-ui-react";
 import { RootState } from "../store/index";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
@@ -58,9 +57,9 @@ export class SignupForm extends Component<ISignupListProps> {
       about: formFieldValue3
     });
 
-    alert("You are signed up on MeetHub..");
+    alert("You are signed up on MeetHub..Please press Login..");
     //fetching signupList toconsole for making sure data is added or not.
-    console.log(this.props.signupList);
+    console.log("Current this.props.signupList:"+this.props.signupList);
   };
 
   
@@ -74,7 +73,7 @@ export class SignupForm extends Component<ISignupListProps> {
       >
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="teal" textAlign="center">
-            WelCome to MeetHub Create your account
+            WelCome to MeetHub / Create your account
           </Header>
           <Form size="large" onSubmit={this.addSignup} success>
             <Segment stacked>
@@ -130,9 +129,9 @@ export class SignupForm extends Component<ISignupListProps> {
           <ul>
             {this.props.signupList.map((element) => (
               <li>
-                {element.username}
-                {element.password}
-                {element.email}
+                {element.username}{"    |    "}
+                {element.password}{"   |     "}
+                {element.email}{"    |    "}
                 {element.about}
               </li>
             ))}
