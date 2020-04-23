@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import store from './store/index';
+import store from './store/signupIndex';
 import {createBrowserHistory} from 'history';
 import {Router} from 'react-router-dom';
-
+//this is for router , to go from one page to another..
 export const history=createBrowserHistory();
 
 ReactDOM.render(

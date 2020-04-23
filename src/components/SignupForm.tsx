@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, Grid, Segment, Header } from "semantic-ui-react";
-import { RootState } from "../store/index";
+import { RootState } from "../store/signupIndex";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
