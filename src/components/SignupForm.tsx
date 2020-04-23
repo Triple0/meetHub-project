@@ -5,7 +5,7 @@ import {
   Grid,
   Segment,
   Message,
-  Header,
+  Header
 } from "semantic-ui-react";
 
 import { RootState } from "../store/index";
@@ -47,6 +47,8 @@ export class SignupForm extends Component<ISignupListProps> {
       password: formFieldValue1,
       email: formFieldValue2,
     });
+
+    alert("You are signed up on MeetHub..");
   };
 
   render() {
@@ -58,7 +60,7 @@ export class SignupForm extends Component<ISignupListProps> {
       >
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="teal" textAlign="center">
-            WelCome to MeetHub / Create your account
+            WelCome to MeetHub Create your account
           </Header>
           <Form size="large" onSubmit={this.addSignup} success>
             <Segment stacked>
