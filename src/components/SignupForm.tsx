@@ -4,7 +4,7 @@ import { RootState } from "../store/signupIndex";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 //add interface ISignupListProps which is passing ny props

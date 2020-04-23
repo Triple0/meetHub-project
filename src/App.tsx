@@ -4,7 +4,7 @@ import "./App.css";
 import SignupForm from "./components/SignupForm";
 import Login from "./components/Login";
 import { Grid } from "semantic-ui-react";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 
 export interface IAppProps{
 }
