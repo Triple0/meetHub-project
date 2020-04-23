@@ -6,23 +6,21 @@ import Login from "./components/Login";
 import { Grid } from "semantic-ui-react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
-class App extends Component {
+export interface IAppProps{
+}
+
+export default class App extends Component<IAppProps> {
   render() {
     return (
       <Grid centered>
-          <Router>
-          <SignupForm />
-          
-          <Switch>
-            <Route>
-
-            </Route>
-
-          </Switch>
-          </Router> 
+          {/* Start with /Login in browser it can appear Login component */}
+        <Switch>
+          <Route path="/SignupForm" component={SignupForm}/>
+          <Route path="/Login" component={Login}/>
+        </Switch>   
       </Grid>
     );
   }
 }
 
-export default App;
+

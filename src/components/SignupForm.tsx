@@ -63,6 +63,7 @@ export class SignupForm extends Component<ISignupListProps> {
     console.log(this.props.signupList);
   };
 
+  
 
   render() {
     return (
@@ -117,12 +118,12 @@ export class SignupForm extends Component<ISignupListProps> {
               <Button color="teal" fluid size="large" type="submit">
                 SignUp
               </Button>
-
             </Segment>
           </Form>
-
-          <Button as={Link} to="/Login" color="teal" fluid size="large" stacked>
-          To LoginPage
+          
+          {/* This is button for to go login page from signup page.. */}
+          <Button as={Link} to={"/Login"} contect="GoToLoginPage" color="teal" fluid size="large">
+            GoToLoginPage
           </Button>
 
           {/* This is just showing list of */}

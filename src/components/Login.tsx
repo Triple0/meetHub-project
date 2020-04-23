@@ -1,13 +1,21 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import {Button} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
-export class Login extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Login Page</h1>
-            </div>
-        )
-    }
+export interface ILoginProps {
 }
 
-export default Login
+export default class Login extends React.Component<ILoginProps> {
+  public render() {
+    return (
+      <div>
+        <h1>Login Page </h1>
+        
+        <Button as={Link} to={"/SignupForm"} contect="GoToSignupPage" color="teal" fluid size="large">
+            GoToSignupPage
+        </Button>
+      </div>
+    );
+  }
+}
+
