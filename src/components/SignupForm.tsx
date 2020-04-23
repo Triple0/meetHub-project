@@ -1,55 +1,66 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Form,
-  Grid,
-  Segment,
-  Message,
-  Header
-} from "semantic-ui-react";
-
+import Login from "./Login";
+import { Button, Form, Grid, Segment, Message, Header } from "semantic-ui-react";
 import { RootState } from "../store/index";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+
+//add interface ISignupListProps which is passing ny props
 export interface ISignupListProps {
   addSignupToList: typeof addSignupToList;
   signupList: Signup[];
 }
 
 export class SignupForm extends Component<ISignupListProps> {
-  //for adding new todo task into the whole Todo list
+
+  //for adding new Signup Detail into the Signup List whichis defined in reducer
   addSignup = (event: any) => {
     event.preventDefault();
-    // Handle retrieval of form field value.
+
+    // Handle retrieval of username form field value.
     const formFieldUsername: HTMLInputElement | null = document.querySelector(
       '[name="username-input"]'
     );
     let formFieldValue: string = "";
     if (formFieldUsername !== null) formFieldValue = formFieldUsername.value;
 
+    // Handle retrieval of password form field value.
     const formFieldPassword: HTMLInputElement | null = document.querySelector(
       '[name="password-input"]'
     );
     let formFieldValue1: string = "";
     if (formFieldPassword !== null) formFieldValue1 = formFieldPassword.value;
 
+    // Handle retrieval of email form field value.
     const formFieldEmail: HTMLInputElement | null = document.querySelector(
       '[name="email-input"]'
     );
     let formFieldValue2: string = "";
     if (formFieldEmail !== null) formFieldValue2 = formFieldEmail.value;
 
-    // Add new task into whole list.
+
+    // Handle retrieval of "About Yourself" form field value.
+    const formFieldAbout: HTMLTextAreaElement | null = document.querySelector(
+      '[name="about-textarea"]'
+    );
+    let formFieldValue3: string = "";
+    if (formFieldAbout !== null) formFieldValue3 = formFieldAbout.value;
+
+
+    // Add new Signup Detail into Signup list.
     this.props.addSignupToList({
       username: formFieldValue,
       password: formFieldValue1,
       email: formFieldValue2,
+      about: formFieldValue3
     });
 
     alert("You are signed up on MeetHub..");
   };
+
 
   render() {
     return (
@@ -71,7 +82,7 @@ export class SignupForm extends Component<ISignupListProps> {
                 label="Username"
                 icon="user"
                 iconPosition="left"
-                placeholder="E-mail address"
+                placeholder="Username"
               />
               <Form.Input
                 fluid
@@ -93,28 +104,32 @@ export class SignupForm extends Component<ISignupListProps> {
                 placeholder="joe@schmoe.com"
                 type="email"
               />
-              <Button color="teal" fluid size="large">
+              <Form.TextArea 
+                fluid
+                required
+                name="about-textarea" 
+                label="About Yourself" 
+                placeholder='Tell us more about you...' 
+                type="textarea"/>
+
+              <Button color="teal" fluid size="large" type="submit">
                 SignUp
               </Button>
+
             </Segment>
-            <Message
-              success
-              header="Form Submitted"
-              content="You're all signed up for the MeetHub."
-            />
           </Form>
 
-
+          
+          <Button as={Link} to="/Login" color="teal" fluid size="large" stacked>
+          To LoginPage
+          </Button>
           <ul>
             {this.props.signupList.map((element) => (
               <li>
                 {element.username}
                 {element.password}
                 {element.email}
-                {/* <Button 
-                  size="mini" color="red"
-                  onClick={(event) => this.deleteTask(element.id)}
-                >X</Button> */}
+                {element.about}
               </li>
             ))}
           </ul>
@@ -124,10 +139,10 @@ export class SignupForm extends Component<ISignupListProps> {
   }
 }
 
-//Retrieve "todo list" from our "global" redux state.
+//Retrieve "Signup List" from our "global" redux state.
 const mapStateToProps = (state: RootState) => {
   return {
-    signupList: state.signup.signupList, //this is taskList fromreducer.ts
+    signupList: state.signup.signupList, //this is signupList here is from signupReducer.ts
   };
 };
 

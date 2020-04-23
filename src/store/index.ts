@@ -3,6 +3,7 @@ import {composeWithDevTools} from "redux-devtools-extension";
 import {signupReducer} from "./reducers/signupReducer";
 
 //combine all the reducers together for a global app
+//Here is connect signupReducer into name by signup. we can comnine it from coma to other reducers
 const rootReducer = combineReducers({
     signup:signupReducer
 });
