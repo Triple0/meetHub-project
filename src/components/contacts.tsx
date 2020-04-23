@@ -9,7 +9,7 @@ import usePostContactService from '../store/services/usePostContactService';
 const Contacts: React.FunctionComponent<{}> = () => {
   const service = usePostContactService();
 
-  // console.log(service.payload.id);
+   console.log(service.status);
 
   return (
     

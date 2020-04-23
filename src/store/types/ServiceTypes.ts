@@ -21,5 +21,3 @@ export type ServiceTypes<T> =
 | ServiceLoading
 | ServiceLoaded<T>
 | ServiceError;
-  
-  
