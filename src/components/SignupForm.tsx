@@ -59,6 +59,8 @@ export class SignupForm extends Component<ISignupListProps> {
     });
 
     alert("You are signed up on MeetHub..");
+    //fetching signupList toconsole for making sure data is added or not.
+    console.log(this.props.signupList);
   };
 
 
@@ -119,10 +121,11 @@ export class SignupForm extends Component<ISignupListProps> {
             </Segment>
           </Form>
 
-          
           <Button as={Link} to="/Login" color="teal" fluid size="large" stacked>
           To LoginPage
           </Button>
+
+          {/* This is just showing list of */}
           <ul>
             {this.props.signupList.map((element) => (
               <li>
