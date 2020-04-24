@@ -27,7 +27,7 @@ const initialState: SignupListState = {
 export function signupReducer (
   state = initialState,
   action: SignupActionTypes
-) {
+):SignupListState {
 
   //just for checking that the array og signup date added or not..
   console.log(state);
