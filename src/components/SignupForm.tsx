@@ -5,6 +5,7 @@ import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+//import {reset} from 'redux-form';
 
 
 //add interface ISignupListProps which is passing ny props
@@ -58,6 +59,7 @@ export class SignupForm extends Component<ISignupListProps> {
     });
     
     alert("You are signed up on MeetHub..Please press Login..");
+    event.target.reset(); //reseting form fileds to blank
     //fetching signupList toconsole for making sure data is added or not.
     console.log(this.props.signupList);
   };
@@ -81,6 +83,7 @@ export class SignupForm extends Component<ISignupListProps> {
                 fluid
                 required
                 name="username-input"
+                ref="user"
                 label="Username"
                 icon="user"
                 iconPosition="left"
