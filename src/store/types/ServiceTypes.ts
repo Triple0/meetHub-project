@@ -7,13 +7,14 @@ interface ServiceLoading {
 }
   
 interface ServiceLoaded<data> {
-    status: 'loaded';
-    payload: data;
+    status: 'loaded',
+    payload: data,
+    isLoading: boolean
 }
   
 interface ServiceError {
-    status: 'error';
-    error: Error;
+    status: 'error',
+    error: Error
 }
   
 export type ServiceTypes<data> =

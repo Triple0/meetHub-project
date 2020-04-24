@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 // import { Feed, Icon } from 'semantic-ui-react';
 import usePostContactService from '../services/usePostContactService';
 
 const NewsFeed: React.FunctionComponent<{}> = () => {
     const service = usePostContactService();
 
-    console.log(service.status);
+    // console.log(service.status);
     
 
     return (
 
         <div>
-            <h1>Contact List</h1>
-            <p>News Feed</p>
-            {service.status === 'loading' && <div>Loading...</div>}
+            <Suspense fallback = {<h1>Contact List</h1>}>
+            <Suspense fallback = {<p>News Feed</p>} />
+            <Suspense fallback = {service.status === 'loading' && <div>Loading...</div>}>
             {service.status === 'loaded' && service.payload.results.map(contact => (<div key={contact.id}>
                 <ul>
                     <li>{contact.title}</li>
@@ -21,7 +21,10 @@ const NewsFeed: React.FunctionComponent<{}> = () => {
                 </ul>
 
             </div>))}
-            {service.status === 'error' && (<div>Error!! Page Can't Load...</div>)}        
+            <Suspense fallback = {service.status === 'error' && (<div>Error!! Page Can't Load...</div>)} >  
+            </Suspense>
+            </Suspense>
+            </Suspense>    
 
         </div >
     );

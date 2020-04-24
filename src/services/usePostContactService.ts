@@ -18,9 +18,10 @@ const usePostContactService = () => {
 
     fetch('https://jsonplaceholder.typicode.com/posts', { signal: signal })
       .then(response => response.json())
-      .then(response => setResult({ status: 'loaded', payload: response }))
+      .then(response => setResult({ status: 'loaded', payload: response, isLoading: false }))
       .catch(error => setResult({ status: 'error', error }))
-        return () => abortController.abort();
+        return () =>
+        abortController.abort();
       ;
   }, []);
   
