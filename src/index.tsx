@@ -1,22 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { Provider } from 'react-redux';
-import store from './store/signupIndex';
-import {createBrowserHistory} from 'history';
-import {Router} from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { Provider } from "react-redux";
+import store from "./store/signupIndex";
+import { createBrowserHistory } from "history";
+import { Router } from "react-router-dom";
 //this is for router , to go from one page to another..
-export const history=createBrowserHistory();
+export const history = createBrowserHistory();
 
 ReactDOM.render(
-  <Provider store={store()} >
-    <Router history={history}>
+  <Router history={history}>
+    <Provider store={store()}>
       <App />
-    </Router>
-  </Provider>,
-  document.getElementById('root')
+    </Provider>
+  </Router>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

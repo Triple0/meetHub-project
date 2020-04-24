@@ -56,7 +56,7 @@ export class SignupForm extends Component<ISignupListProps> {
       email: formFieldValue2,
       about: formFieldValue3
     });
-
+    
     alert("You are signed up on MeetHub..Please press Login..");
     //fetching signupList toconsole for making sure data is added or not.
     console.log(this.props.signupList);
