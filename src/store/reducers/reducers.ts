@@ -1,4 +1,4 @@
-import { NewsFeedState, ADD_NEWSFEED, ActionTypes } from "../types/ContactTypes";
+import { NewsFeedState, ADD_NEWSFEED, ActionTypes } from "../types/NewsFeed";
 
 const initialState: NewsFeedState = {
   newsFeed: [
@@ -355,14 +355,14 @@ const initialState: NewsFeedState = {
   ],
 };
 
-export function taskReducer(
+export function newsFeedReducer(
     state = initialState, 
     action: ActionTypes) {
   switch (action.type) {
     case ADD_NEWSFEED:
       return {
         ...state,
-        tasks: [...state.newsFeed, action.payload]
+        newsFeed: [...state.newsFeed, action.payload]
       };
 
     default:
