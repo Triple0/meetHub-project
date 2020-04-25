@@ -11,10 +11,17 @@ export interface NewsFeedState {
 }
 
 export const ADD_NEWSFEED = 'ADD_NEWSFEED';
+export const DELETE_NEWSFEED = 'DELETE_NEWSFEED';
 
-interface AddNewsFeedToList {
+
+interface DeleteNewsFeed {
+    type: typeof DELETE_NEWSFEED,
+    payload: number
+}
+
+interface AddNewsFeed {
     type: typeof ADD_NEWSFEED,
     payload: NewsFeed
 }
 
-export type ActionTypes = AddNewsFeedToList;
+export type ActionTypes = AddNewsFeed | DeleteNewsFeed;

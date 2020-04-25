@@ -14,7 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(10, 197, 168, 0.45);
+  color: white;
+}
+
+.ui.feed > .event > .content .summary {
+  color: snow;
+}
+.newsDisplay {
+  background-color: rgba(0, 128, 128, 0.2);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
