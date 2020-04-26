@@ -24,7 +24,6 @@ export class NewsDisplay extends React.Component<INewsDisplayProps, IState> {
 
     constructor(prop: INewsDisplayProps) {
         super(prop);
-        // let count = 0;
         this.state = ({
             interval: 0,
             outputSelector: 1,
@@ -41,7 +40,7 @@ export class NewsDisplay extends React.Component<INewsDisplayProps, IState> {
     // This function generates number randomly that is used to automate newsfeed selection
     timer = () => {
         this.setState({
-            outputSelector: Math.floor((Math.random() * 5) + 1)
+            outputSelector: Math.floor((Math.random() * 10) + 1)
         });
     }
 
