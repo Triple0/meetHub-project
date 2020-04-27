@@ -3,7 +3,7 @@ import {
   SignupListState,
   SignupActionTypes,
   ADD_SIGNUP_TO_LIST
-} from '../types/signupTypes'
+} from '../types/signupTypes';
 
 //set up default or "initial" state for SignupList
 const initialState: SignupListState = {

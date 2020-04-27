@@ -9,7 +9,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 // import {Link} from 'react-router-dom';
 import { Image } from 'semantic-ui-react';
 import Meethublogo from './imgLogin/meet-team.png';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 
@@ -126,7 +126,7 @@ const Login = () => {
               className={classes.loginBtn}
               onClick={()=>handleLogin()}
               disabled={isButtonDisabled}
-              href="./mainPage"
+              href="./NewsForm"
               >
               Login
               
@@ -134,14 +134,12 @@ const Login = () => {
           
           </CardActions>
           <CardActions>
-          <Button               
-             
-               disabled={isButtonDisabled}
-            
+          <Button   
+                         
               variant="contained"
               size="large"
               color="secondary"
-              className={classes.loginBtn} href="./SignupForm">
+              href="./SignupForm">
               Go to the SignUp Page
               </Button>
            

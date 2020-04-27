@@ -5,7 +5,7 @@ import { Grid } from 'semantic-ui-react';
 import { NewsFeed } from '../store/types/NewsFeed';
 import NewsDisplay from './NewsDisplay';
 import NavBar from './NavBar';
-import meetHubLogo from './logo/meetHubLogo.png';
+import meetHubLogo from '../logo/meetHubLogo.png';
 
 
 

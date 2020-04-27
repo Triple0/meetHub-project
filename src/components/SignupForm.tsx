@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, Grid, Segment, Header, Image } from "semantic-ui-react";
-import { RootState } from "../store/signupIndex";
+import { RootState } from "../store/index";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
@@ -62,6 +62,7 @@ export class SignupForm extends Component<ISignupListProps> {
     alert("You are signed up on MeetHub..Please press Login..");
     event.target.reset(); //reseting form fileds to blank
     //fetching signupList toconsole for making sure data is added or not.
+    console.log("fetching signupList toconsole for making sure data is added or not")
     console.log(this.props.signupList);
   };
 
@@ -129,19 +130,7 @@ export class SignupForm extends Component<ISignupListProps> {
           <Button as={Link} to={"/Login"} contect="GoToLoginPage" color="teal" fluid size="large">
             GoToLoginPage
           </Button>
-
-          {/* This is just showing list of */}
-          <ul>
-            {this.props.signupList.map((element) => (
-              <li>
-                {element.username}{"    |    "}
-                {element.password}{"   |     "}
-                {element.email}{"    |    "}
-                {element.about}
-              </li>
-            ))}
-          </ul>
-        </Grid.Column>
+      </Grid.Column>
       </Grid>
     );
   }
