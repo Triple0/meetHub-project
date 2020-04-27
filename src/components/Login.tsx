@@ -7,8 +7,9 @@ import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
 // import {Link} from 'react-router-dom';
-import { Image  } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
 import Meethublogo from './imgLogin/meet-team.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -88,7 +89,7 @@ const Login = () => {
         </CardActions>
 
         
-          <CardHeader className={classes.header} title=  "Memebers Login" />
+          <CardHeader className={classes.header} title=  "Members' Login Page" />
           <CardContent>
             <div>
               <TextField
@@ -140,9 +141,10 @@ const Login = () => {
               variant="contained"
               size="large"
               color="secondary"
-              className={classes.loginBtn} href="./mainPage">
-              GO to main Page
+              className={classes.loginBtn} href="./SignupForm">
+              Go to the SignUp Page
               </Button>
+           
           </CardActions>
           <CardActions>
                       ["user","password"];

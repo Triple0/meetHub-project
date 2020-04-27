@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Button, Form, Grid, Segment, Header } from "semantic-ui-react";
+import { Button, Form, Grid, Segment, Header, Image } from "semantic-ui-react";
 import { RootState } from "../store/signupIndex";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import MeetHubLogo from './imgLogin/meet-team.png';
 //import {reset} from 'redux-form';
 
 
@@ -73,9 +74,10 @@ export class SignupForm extends Component<ISignupListProps> {
         style={{ height: "100vh" }}
         verticalAlign="middle"
       >
+      
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="teal" textAlign="center">
-            WelCome to MeetHub / Create your account
+          <Header as="h2" color="teal" textAlign="center" size="large" fluid>
+          < Image src={MeetHubLogo} style={{width:"450px", height:"100px"}}/>
           </Header>
           <Form size="large" onSubmit={this.addSignup} success>
             <Segment stacked>
