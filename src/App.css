@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: rgba(10, 197, 168, 0.45);
+  color: white;
+}
+
+.ui.feed > .event > .content .summary {
+  color: snow;
+}
+.newsDisplay {
+  background-color: rgba(0, 128, 128, 0.35);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.listing{
+  list-style-type: none;
+  color: black;
+}

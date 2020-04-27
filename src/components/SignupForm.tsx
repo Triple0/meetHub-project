@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Button, Form, Grid, Segment, Header } from "semantic-ui-react";
-import { RootState } from "../store/signupIndex";
+import { Button, Form, Grid, Segment, Header, Image } from "semantic-ui-react";
+import { RootState } from "../store/index";
 import { addSignupToList } from "../store/action/signupAction";
 import { Signup } from "../store/types/signupTypes";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import MeetHubLogo from './imgLogin/meet-team.png';
 //import {reset} from 'redux-form';
 
 
@@ -61,6 +62,7 @@ export class SignupForm extends Component<ISignupListProps> {
     alert("You are signed up on MeetHub..Please press Login..");
     event.target.reset(); //reseting form fileds to blank
     //fetching signupList toconsole for making sure data is added or not.
+    console.log("fetching signupList toconsole for making sure data is added or not")
     console.log(this.props.signupList);
   };
 
@@ -73,9 +75,10 @@ export class SignupForm extends Component<ISignupListProps> {
         style={{ height: "100vh" }}
         verticalAlign="middle"
       >
+      
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="teal" textAlign="center">
-            WelCome to MeetHub / Create your account
+          <Header as="h2" color="teal" textAlign="center" size="large" fluid>
+          < Image src={MeetHubLogo} style={{width:"450px", height:"100px"}}/>
           </Header>
           <Form size="large" onSubmit={this.addSignup} success>
             <Segment stacked>
@@ -127,19 +130,7 @@ export class SignupForm extends Component<ISignupListProps> {
           <Button as={Link} to={"/Login"} contect="GoToLoginPage" color="teal" fluid size="large">
             GoToLoginPage
           </Button>
-
-          {/* This is just showing list of */}
-          <ul>
-            {this.props.signupList.map((element) => (
-              <li>
-                {element.username}{"    |    "}
-                {element.password}{"   |     "}
-                {element.email}{"    |    "}
-                {element.about}
-              </li>
-            ))}
-          </ul>
-        </Grid.Column>
+      </Grid.Column>
       </Grid>
     );
   }
