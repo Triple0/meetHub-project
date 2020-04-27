@@ -8,8 +8,6 @@ import Meethublogo from './imag/Meethublogo.png'
 export default class MenuExampleTabularOnTop extends Component {
     state = { activeItem: 'Daniel' }
 
-    //   handleItemClick = (e: MouseEvent , { name }:aaaa) => this.setState({ activeItem: name })
-
     render() {
         const { activeItem } = this.state
 
@@ -20,13 +18,8 @@ export default class MenuExampleTabularOnTop extends Component {
                     <Menu.Item
                         name='Meethublogo'
                         active={activeItem === 'Daniel'}
-                    // onClick={this.handleItemClick}
                     />
-                    {/* <Menu.Item
-                        name=' '
-                        active={activeItem === ' '}
-                    onClick={this.handleItemClick}
-                    /> */}
+                    
                     <Menu.Menu position='right'>
                         <Menu.Item>
                             <Input
@@ -38,7 +31,7 @@ export default class MenuExampleTabularOnTop extends Component {
                 </Menu>
 
                 <Segment attached='bottom'>
-                    < Image src={Meethublogo} size='medium' floated='left' />
+                    < Image src={this.props.imagurl} size='medium' floated='left' />
                     <p>
                         Apollo 7 was an October 1968 human spaceflight mission carried out by the United States. It was the first mission in the United States' Apollo program to carry a crew into space. It was also the first U.S. spaceflight to carry astronauts since the flight of Gemini XII in November 1966. The AS-204 mission, also known as "Apollo 1", was intended to be the first crewed flight of the Apollo program. It was scheduled to launch in February 1967, but a fire in the cabin during a January 1967 test killed the crew. Crewed flights were then suspended for 21 months, while the cause of the accident was investigated and improvements made to the spacecraft and safety procedures, and uncrewed test flights of the Saturn V rocket and Apollo Lunar Module were made. Apollo 7 fulfilled Apollo 1's mission of testing the Apollo command and service module (CSM) in low Earth orbit.
                         </p>

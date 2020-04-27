@@ -5,6 +5,13 @@ export interface Signup {
     email: string,
     about: string
   }
+
+  export interface userDescription {
+    username:string,
+    about: string,
+    imagurl:string,
+    description:string
+  }
   
   //interface for SignupkList inventory state
   export interface SignupListState {
