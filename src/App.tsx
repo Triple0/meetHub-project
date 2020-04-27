@@ -6,8 +6,7 @@ import Login from "./components/Login";
 import { Grid } from "semantic-ui-react";
 import { Switch, Route } from "react-router-dom";
 import NewsForm from './components/NewsForm';
-import MenuExampleTabularOnTop from './components/fullDescription/fullDescription';
-import NavButtons from './components/navBar';
+import ProfileSearchPage from './components/fullDescription/ProfileSearchPage';
   
 
 
@@ -27,7 +26,7 @@ export default class App extends Component<IAppProps> {
             <Route path="/SignupForm" component={SignupForm} />
             <Route path="/Login" component={Login} />
             <Route path="/NewsForm" component={NewsForm} />
-            { <Route path=/MenuExampleTabularOnTop component={fullDescription}/> }
+            { <Route path="/ProfileSearchPage" component={ProfileSearchPage}/> }
           </Switch>
 
         </Grid.Row>

@@ -1,14 +1,14 @@
 //define interfaces for Signup
-export interface Signup {
+  export interface userDescription {
     username:string,
-    password:string,
-    email: string,
-    about: string
+    about: string,
+    imagurl:string,
+    description:string
   }
-
+  
   //interface for SignupList inventory state
   export interface SignupListState {
-    signupList: Signup[]
+    signupList: userDescription[]
   }
   
   //define action strings for ADD_SIGNUP_TO_LIST
@@ -18,7 +18,7 @@ export interface Signup {
   //interface for function AddSignupToList which is used in signupAction.ts
   interface AddSignupToList {
     type: typeof ADD_SIGNUP_TO_LIST
-    payload: Signup //we need to pass a new Item that should be added to out store.
+    payload: userDescription //we need to pass a new Item that should be added to out store.
   }
   
   //Define action types inclide add SignupDetail list
