@@ -23,7 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     loginBtn: {
       marginTop: theme.spacing(2),
-      flexGrow: 1
+      flexGrow: 1,
+      background: 'teal',
+      color: '#fff'
     },
     header: {
       textAlign: 'center',
@@ -135,10 +137,9 @@ const Login = () => {
           </CardActions>
           <CardActions>
           <Button   
-                         
+              className={classes.loginBtn}          
               variant="contained"
-              size="large"
-              color="secondary"
+              size="large"              
               href="./SignupForm">
               Go to the SignUp Page
               </Button>
