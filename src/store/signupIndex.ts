@@ -16,3 +16,5 @@ export default function configureStore () {
   const store = createStore(rootReducer, composeWithDevTools(applyMiddleware()));
   return store;
 }
+
+
