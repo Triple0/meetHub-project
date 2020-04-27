@@ -7,7 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
 // import {Link} from 'react-router-dom';
-import { Image,  } from 'semantic-ui-react';
+import { Image  } from 'semantic-ui-react';
 import Meethublogo from './imgLogin/meet-team.png';
 
 
@@ -51,11 +51,11 @@ const Login = () => {
       setIsButtonDisabled(true);
     }
   }, [username, password]);
-  const user: any []   = ["user","passward"];
-  const user1: any []   = ["moe","passward1"];
-  const user2: any []   = ["soham","passward2"];
-  const user3: any []   = ["ryan","passward3"];
-  const user4: any []   = ["olalekan","passward4"];
+  const user: any []   = ["user","password"];
+  const user1: any []   = ["moe","password1"];
+  const user2: any []   = ["soham","password2"];
+  const user3: any []   = ["ryan","password3"];
+  const user4: any []   = ["olalekan","password4"];
    
   const handleLogin = () => {
     if( (username === user[0] && password === user[1])||(username===user1[0]&&password===user1[1])||(username===user2[0]&&password===user2[1])||(username===user3[0]&&password===user3[1])||(username===user4[0]&&password===user4[1])) {
@@ -145,11 +145,11 @@ const Login = () => {
               </Button>
           </CardActions>
           <CardActions>
-                      ["user","passward"];
-                      ["moe","passward1"];
-                      ["soham","passward2"];
-                      ["ryan","passward3"];
-                      ["olalekan","passward4"];
+                      ["user","password"];
+                      ["moe","password1"];
+                      ["soham","password2"];
+                      ["ryan","password3"];
+                      ["olalekan","password4"];
 
           </CardActions>
 
