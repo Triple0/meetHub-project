@@ -7,8 +7,6 @@ const NavBarSearch = () => (
   <Sticky>
     <Button.Group size='huge' fluid  color= 'teal' >
       
-      <Button as={Link} to={`/Home`} content="GoToNewsFeedPage">Home</Button>
-
       <Button as={Link} to={`/NewsForm`} content="NewsFeed Page">News</Button>
 
       <Button as={Link} to={`/Login`} content="Login Page">Logout</Button>
