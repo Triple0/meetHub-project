@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './App.css';
-//import { connect } from "react-redux";
 import SignupForm from "./components/SignupForm";
 import Login from "./components/Login";
 import { Grid } from "semantic-ui-react";
@@ -18,7 +17,7 @@ export default class App extends Component<IAppProps> {
     return (
 
       <Grid centered>
-        {/* Start with localhost:3000/Login in browser it can appear Login component 
+        {/* Start by typing localhost:3000/Login in browser it can appear Login component 
           after that it will switch from login and signup form..*/}
 
         <Grid.Row centered>
