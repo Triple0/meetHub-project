@@ -8,7 +8,7 @@ const NavBar = () => (
   <Sticky>
     <Button.Group size='huge' fluid  color= 'teal' >
       
-      <Button as={Link} to={`/Home`} content="GoToNewsFeedPage">Home</Button>
+      <Button as={Link} to={`/Login`} content="GoToNewsFeedPage">Login</Button>
 
       <Button as={Link} to={`/ProfileSearchPage`} content="Profile Page">Members' Profile</Button>
 

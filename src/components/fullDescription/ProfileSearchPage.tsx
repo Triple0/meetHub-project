@@ -69,7 +69,9 @@ export class ProfileSearchPage extends Component<ISignupListProps, IState> {
                 username: myTempStore.map(element => element.username)[0],
                 email: myTempStore.map(element => element.email)[0],
                 about: myTempStore.map(element => element.about)[0]})
-        }   
+        }  
+        
+        console.log(this.props.signupList);
 
     }
 
