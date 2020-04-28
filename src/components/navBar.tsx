@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Sticky, Container} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-const NavButtons = () => (
+const NavBar = () => (
   <Container>
   <Sticky>
     <Button.Group size='huge' fluid  color= 'teal' >
@@ -20,4 +20,4 @@ const NavButtons = () => (
     
   )
 
-  export default NavButtons
+  export default NavBar
